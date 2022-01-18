@@ -36,13 +36,14 @@ connection.once('open', async () => {
 
   // Add students to the collection and await the results
   await Student.collection.insertMany(students);
-
+  await Thought.collection.insertMany(students);
   // Add courses to the collection and await the results
-  await Thought.collection.insertOne({
-    thoughtName: 'UCLA',
-    inPerson: false,
-    students: [...students],
-  });
+  //Just ONE
+  // await Thought.collection.insertOne({
+  //   thoughtName: 'UCLA',
+  //   inPerson: false,
+  //   students: [...students],
+  // });
 
   // Log out the seed data to indicate what should appear in the database
   console.table(students);
