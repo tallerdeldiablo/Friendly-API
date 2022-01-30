@@ -1,8 +1,7 @@
 const { Schema, model } = require('mongoose');
 
-
 // Schema to create Thought model
-const thoughtSchema = new Schema(
+const userSchema = new Schema(
   {
     username: {
       type: String,
@@ -38,6 +37,6 @@ const thoughtSchema = new Schema(
   }
 );
 
-const Thought = model('Thought', thoughtSchema);
+const User = model('User', userSchema);
 
-module.exports = Thought;
+module.exports = User;
